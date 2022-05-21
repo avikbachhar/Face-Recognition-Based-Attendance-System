@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" dir='ltr'>
+<head>
+    <meta charset='utf-8'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel='stylesheet' type='text/css' media='screen' href='check-attendancenavbardemo.css'>
+    <script src='checkattendance.js'></script>
+    <script src="https://kit.fontawesome.com/c7dbb8510b.js" crossorigin="anonymous"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='topnav.css'>
+    
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <i class="fa-solid fa-house-user"></i>
+                <div class="logo_name">Admin Page</div>
+            </div>
+            <i class='bx bx-menu' id='btn'></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <i class='bx bx-search-alt' ></i>
+                <input type="text" placeholder="Search..">
+            <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href='Admin-home.html'><i class="fa-regular fa-user"></i>
+                <span class="links_name">Admin Home</span>
+            </a>
+            <span class="tooltip">Admin Home</span>
+            </li>
+            <li>
+                <a href='Check Attendance.html'><i class="fa-solid fa-calendar-check"></i>
+                <span class="links_name">Check Attendance</span>
+            </a>
+            <span class="tooltip">Check Attendance</span>
+            </li>
+            <li>
+                <a href='Add-Department.html'>
+                    <i class="fa-solid fa-landmark"></i>
+                <span class="links_name">Add Department</span>
+            </a>
+            <span class="tooltip">Add Department</span>
+            </li>
+            <li>
+                <a href='Add New Member.html'>
+                    <i class="fa-solid fa-user-plus"></i>
+                <span class="links_name">Add New Member</span>
+            </a>
+            <span class="tooltip">Add New Member</span>
+            </li>
+ 
+            <li>
+                <a href='#'>
+                    <i class='bx bx-cog' ></i>
+                <span class="links_name">Settings</span>
+            </a>
+            <span class="tooltip">Settings</span>
+            </li>                </ul>
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                    <img src="profile.png" alt="">
+
+                    <div class="name_job">
+                        <div class="name">Avik Bachhar</div>
+                        <div class="job">Developer</div>
+                        </div>
+                    </div>
+                    <a href='home.html'>
+                    <i class='bx bx-log-out' id="log_out" ></i>        
+                </a>
+                </div>
+            </div>
+        </div>
+        <div class="home_content">
+            <div class="text"> Attendance Page</div>
+            <div class="flex-container">
+
+
+                                    <div class="table-data" >
+                                    
+                                        <table id="tb">
+                                            <thead>
+                                                    <tr>
+                                                        <th>Student ID</th>
+                                                        <th>Student Name</th>
+                                                        <th>Attendance</th>
+                                                        <th>Department</th>
+                                                    </tr>
+                                            </thead>
+                                            <tbody id="tbodyid">
+                                                <tr>
+                                                    <td>434120010026</td>
+                                                    <td>Avik Bachhar</td>
+                                                    <td>25/30</td>
+                                                    <td>MCA</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>434120010026</td>
+                                                    <td>Avik Bachhar</td>
+                                                    <td>25/30</td>
+                                                    <td>MCA</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>434120010026</td>
+                                                    <td>Avik Bachhar</td>
+                                                    <td>25/30</td>
+                                                    <td>MCA</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>434120010026</td>
+                                                    <td>Avik Bachhar</td>
+                                                    <td>25/30</td>
+                                                    <td>MCA</td>
+                                                </tr>                                                <tr>
+                                                    <td>434120010026</td>
+                                                    <td>Avik Bachhar</td>
+                                                    <td>25/30</td>
+                                                    <td>MCA</td>
+                                                </tr>
+
+                                            </tbody>
+                                    
+                                        </table>
+                                    </div>
+                                    
+                                    <div class="block-sense">
+                                        <div class="flex-container">
+                                        <div class="calendar">
+                                        
+                                        <div class="user-details">
+                                            <div class="input-box">
+                                                <span class="details">From Date</span><br>
+                                                <input type="date"  name="Book_Time" id="From_Time" >        
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                        
+                                    </div>
+                                    <div class="calendar">
+                                        <div class="user-details">
+                                            <div class="input-box">
+                                                <span class="details">Department</span><br>
+                                                <select class="location" name="" id="flight">
+                                                    <option value="" disabled="disabled" selected="selected">Choose Department</option>
+                                                    <option>Delhi</option>
+                                                    <option>Mumbai</option>
+                                                      </select>
+                                            </div>
+                                        </div>
+                                    
+                                        
+                                </div>
+                                <div class="calendar">
+                                    <div class="user-details">
+                                        <div class="input-box">
+                                            <span class="details">Check By Department</span><br>
+                                            <div class="button">
+                                                <input onclick="buttonpressed2()" type="submit" value="Check Attendance">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                
+                                    
+                            </div>
+                            
+
+                                    
+                            </div>
+                            <div class="block-sense">
+                                <div class="flex-container">
+                                <div class="calendar">
+                                
+                                <div class="user-details">
+                                    <div class="input-box">
+                                        <span class="details">To Date</span><br>
+                                        <input type="date"  name="to_Time" id="to_Time" >        
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                                
+                            </div>
+                            <div class="calendar">
+                                <div class="user-details">
+                                    <div class="input-box">
+                                        <span class="details">Roll Number</span><br>
+                                        <input type="number" id="rollno" placeholder="Enter Roll Number" required>
+                                              </select>
+                                    </div>
+                                </div>
+                            
+                                
+                        </div>
+
+
+
+                                
+
+
+            </div>
+        </div>
+
+    <script >
+        let btn = document.querySelector("#btn");
+        let log_out = document.querySelector("#log_out");
+        let sidebar = document.querySelector(".sidebar");
+        let searchBtn = document.querySelector(".bx-search-alt");
+        btn.onclick=function(){
+            sidebar.classList.toggle("active");
+        }
+        log_out.onclick=function(){
+            sidebar.classList.toggle("active");
+        }
+        searchBtn.onclick=function(){
+            sidebar.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
+

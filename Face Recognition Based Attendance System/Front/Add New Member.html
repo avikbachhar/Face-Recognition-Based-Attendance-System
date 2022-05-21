@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir='ltr'>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel='stylesheet' type='text/css' media='screen' href='addmember.css'>
+    <script src="addmember.js"></script>
+    <script src="https://kit.fontawesome.com/c7dbb8510b.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
+    
+</head>
+<body>
+    
+      <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <i class="fa-solid fa-house-user"></i>
+                <div class="logo_name">Admin Page</div>
+            </div>
+            <i class='bx bx-menu' id='btn'></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <i class='bx bx-search-alt' ></i>
+                <input type="text" placeholder="Search..">
+            <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href='Admin-home.html'><i class="fa-regular fa-user"></i>
+                <span class="links_name">Admin Home</span>
+            </a>
+            <span class="tooltip">Admin Home</span>
+            </li>
+            <li>
+                <a href='Check Attendance.html'><i class="fa-solid fa-calendar-check"></i>
+                <span class="links_name">Check Attendance</span>
+            </a>
+            <span class="tooltip">Check Attendance</span>
+            </li>
+            <li>
+                <a href='Add-Department.html'>
+                    <i class="fa-solid fa-landmark"></i>
+                <span class="links_name">Add Department</span>
+            </a>
+            <span class="tooltip">Add Department</span>
+            </li>
+            <li>
+                <a href='Add New Member.html'>
+                    <i class="fa-solid fa-user-plus"></i>
+                <span class="links_name">Add New Member</span>
+            </a>
+            <span class="tooltip">Add New Member</span>
+            </li>
+ 
+            <li>
+                <a href='#'>
+                    <i class='bx bx-cog' ></i>
+                <span class="links_name">Settings</span>
+            </a>
+            <span class="tooltip">Settings</span>
+            </li>             
+        </ul>
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                    <img src="profile.png" alt="">
+
+                    <div class="name_job">
+                        <div class="name">Avik Bachhar</div>
+                        <div class="job">Developer</div>
+                        </div>
+                    </div>   
+                    <i class='bx bx-log-out' id="log_out" ></i>        
+                </div>
+            </div>
+        </div>
+        <div class="home_content">
+            <div class="text"> Add New Member</div>
+            <div class="add-member">
+                <div class="container">
+                    <div class="title">Registration</div>
+                    <form action="#" onsubmit="return false">
+                        <div class="user-details">
+                            <div class="input-box">
+                                <span class="details">First Name</span>
+                                <input type="text" id="fname" placeholder="Enter First Name" required>
+                            </div> 
+                            <div class="input-box">
+                                <span class="details">Roll Number</span>
+                                <input type="number" id="rollno" placeholder="Enter Roll Number" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Last Name</span>
+                                <input type="text" id="lname" placeholder="Enter Last Name" required>
+                            </div>                                                    
+                            <div class="input-box">
+                                
+                                
+                                
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Choose Department</span>
+                                <select class="custom-select" name="" id="flight">
+                                    <option value="" disabled="disabled" selected="selected">Deptartment</option>
+                                    <option>Air Aisa</option>
+                                    <option>Luftansa</option>
+                                      </select>
+                            </div>
+
+
+
+
+                            <div class="input-bo">
+                                <span class="details" style="float:left">Add Image</span>
+                                <input onchange="previewFile()" type="file" class="custom-file-input" name="image" id = "image" accept=".jpg" required>
+                                
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="button">
+                            <input onclick="buttonpressed()" type="submit" value="Register">
+                        </div>
+
+                    </form>
+                    
+                </div>
+            </div>
+
+        </div>
+    <script >
+        let btn = document.querySelector("#btn");
+        let sidebar = document.querySelector(".sidebar");
+        let searchBtn = document.querySelector(".bx-search-alt");
+        btn.onclick=function(){
+            sidebar.classList.toggle("active");
+        }
+        searchBtn.onclick=function(){
+            sidebar.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

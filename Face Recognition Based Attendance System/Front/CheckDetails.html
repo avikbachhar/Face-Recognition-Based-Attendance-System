@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir='ltr'>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel='stylesheet' type='text/css' media='screen' href='navbardemo-adminhome2.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js" 
+    integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js" integrity="sha512-+/4Q+xH9jXbMNJzNt2eMrYv/Zs2rzr4Bu2thfvzlshZBvH1g+VGP55W8b6xfku0c0KknE7qlbBPhDPrHFbgK4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/c7dbb8510b.js" crossorigin="anonymous"></script>
+    <script src='Registration.js'></script>
+
+</head>
+<body>
+    
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <i class="fa-solid fa-house-user"></i>
+                <div class="logo_name">eAttendance</div>
+            </div>
+            <i class='bx bx-menu' id='btn'></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <i class='bx bx-search-alt' ></i>
+                <input type="text" placeholder="Search..">
+            <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href='#'><i class="fa-regular fa-user"></i>
+                <span class="links_name">Home</span>
+            </a>
+            <span class="tooltip">Home</span>
+            </li>
+            <li>
+                <a href='index2.html'><i class="fa-solid fa-calendar-check"></i>
+                <span class="links_name">Attendance Page</span>
+            </a>
+            <span class="tooltip">Check Attendance</span>
+            </li>
+            <li>
+                <a href='Admin-home.html'>
+                    <i class="fa-solid fa-landmark"></i>
+                <span class="links_name">Admin Section</span>
+            </a>
+            <span class="tooltip">Admin Section</span>
+            </li>
+            <li>
+                <a href='CheckDetails.html'>
+                    <i class="fa-solid fa-user-plus"></i>
+                <span class="links_name">Student Section</span>
+            </a>
+            <span class="tooltip">Student Section</span>
+            </li>
+ 
+            <li>
+                <a href='#'>
+                    <i class='bx bx-cog' ></i>
+                <span class="links_name">Settings</span>
+            </a>
+            <span class="tooltip">Settings</span>
+            </li>        
+        </ul>
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                    <img src="profile.png" alt="">
+
+                    <div class="name_job">
+                        <div class="name">Avik Bachhar</div>
+                        <div class="job">Developer</div>
+                        </div>
+                    </div>   
+                    <i class='bx bx-log-out' id="log_out" ></i>        
+                </div>
+            </div>
+        </div>
+        <div class="home_content">
+            <div class="regform"><h1>Student Registration & Update Section</h1></div>
+            <div class="main">
+                <form onsubmit="return false"> 
+                         <div id="name">
+                        <h2 class="name">Roll</h2>
+                         <input class="firstname" type="number" name="first_name"  id="rollinput" placeholder="Roll Number">
+                         <div class="rolbut">
+                         <button  id="check-btn"  onclick="checkDetails3()">Check Details</button>
+                        </div>
+                        <div class="rolbut2">
+                            <button id="reload-btn"  onclick="Reload()" >Reload</button>
+                           </div>
+                         <div class="photo">
+                            <img id="profileImage" src="profile.jpg" width="180" height="200"/>
+        
+                         </div>
+        
+                         
+        
+        
+                    </div> 
+                    <div id="name">
+                        <h2 class="name">First Name</h2>
+                        <input class="firstname" type="text" name="first_name" id="fname"><br>
+                        <label class="firstlabel">First Name</label>
+                    </div>
+                    <div id="name">
+                        <h2 class="name">Last Name</h2>
+                        <input class="firstname" type="text" name="last_name" id="lname"><br>
+                        <label class="firstlabel">Last Name</label>
+                    </div>
+                    <h2 class="name">Department</h2>
+                    <input class="firstname" type="text" name="last_name" id="dname"><br>
+                    <label for="show" class="show-btn">Upload Photo</label>
+                </form>
+                <div class="center">
+                    <input type="checkbox" id="show">
+                    
+                    <div class="container">
+                        
+                        <label for="show" class="close-btn fa fa-times"></label>
+                        <div class="text">Register From</div>
+                        <form action="#">
+                            <div class="data">
+                                <label>Name</label>
+                                <input type="text">
+                            </div>
+                            <div class="data">
+                                <label>Add Image</label>
+                                <input oninput="filesize(this);" type="file" class="custom-file-input" name="image" id = "image" >
+                            </div>
+                            <div class="btn">
+                                <div class="inner"></div>
+                                <button type="submit">Upload Details</button>
+                            </div>
+        
+                        </form>
+                    </div>
+                </div>
+            </div>
+                
+        </div> 
+        </div>
+        </div>
+
+
+        
+    <script >
+        let btn = document.querySelector("#btn");
+        let sidebar = document.querySelector(".sidebar");
+        let searchBtn = document.querySelector(".bx-search-alt");
+        btn.onclick=function(){
+            sidebar.classList.toggle("active");
+        }
+        searchBtn.onclick=function(){
+            sidebar.classList.toggle("active");
+        }
+        $('.counter').counterUp({
+    delay: 10,
+    time: 1000
+});
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir='ltr'>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel='stylesheet' type='text/css' media='screen' href='add-deptnavbardemo.css'>
+    <script src='Add-Department.js'></script>
+    <script src="https://kit.fontawesome.com/c7dbb8510b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <i class="fa-solid fa-house-user"></i>
+                <div class="logo_name">Admin Page</div>
+            </div>
+            <i class='bx bx-menu' id='btn'></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <i class='bx bx-search-alt' ></i>
+                <input type="text" placeholder="Search..">
+            <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href='Admin-home.html'><i class="fa-regular fa-user"></i>
+                <span class="links_name">Admin Home</span>
+            </a>
+            <span class="tooltip">Admin Home</span>
+            </li>
+            <li>
+                <a href='Check Attendance.html'><i class="fa-solid fa-calendar-check"></i>
+                <span class="links_name">Check Attendance</span>
+            </a>
+            <span class="tooltip">Check Attendance</span>
+            </li>
+            <li>
+                <a href='Add-Department.html'>
+                    <i class="fa-solid fa-landmark"></i>
+                <span class="links_name">Add Department</span>
+            </a>
+            <span class="tooltip">Add Department</span>
+            </li>
+            <li>
+                <a href='Add New Member.html'>
+                    <i class="fa-solid fa-user-plus"></i>
+                <span class="links_name">Add New Member</span>
+            </a>
+            <span class="tooltip">Add New Member</span>
+            </li>
+ 
+            <li>
+                <a href='#'>
+                    <i class='bx bx-cog' ></i>
+                <span class="links_name">Settings</span>
+            </a>
+            <span class="tooltip">Settings</span>
+            </li>           
+        </ul>
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                    <img src="profile.png" alt="">
+
+                    <div class="name_job">
+                        <div class="name">Avik Bachhar</div>
+                        <div class="job">Developer</div>
+                        </div>
+                    </div>   
+                    <i class='bx bx-log-out' id="log_out" ></i>        
+                </div>
+            </div>
+        </div>
+        <div class="home_content">
+            <div class="text"> Add Department</div>
+            <div class="flex-container">
+                <div class="add-data">
+                    <div class="regform"><h1>Add Department Details</h1></div>
+                    <div class="main">
+                    <div id="name">
+                        <h2 class="name">Department Name</h2>
+                        <input class="firstname" type="text" name="first_name" id="dname" required><br>
+                        <label id='dlabel' class="firstlabel">Department Name</label>
+                    </div>
+                    <div id="name">
+                        <h2 class="name">Year</h2>
+                        <select class="location" id="year" name="year"></select>
+                    </div>
+                    <div class="btn">
+                        <div class="inner"></div>
+                        <button onclick="onclickAddDepartment()" type="submit">Add Details</button>
+                    </div>
+                </div>
+                </div>
+                <div class="view-data">
+                    <table id="tb">
+                        <thead>
+                                <tr>
+                                    <th>Department Name</th>
+                                    <th>Year</th>
+                                </tr>
+                                
+                        </thead>
+                        <tbody id="tbodyid">
+                            <tr>
+                                <td>MCA</td>
+                                <td>2020</td>
+                            </tr>
+                            <tr>
+                                <td>BTECH CSE</td><td>2020</td>
+                            </tr>
+                            <tr>
+                                <td>MTECH</td><td>2020</td>
+                            </tr>
+                            <tr>
+                                <td>BBA</td><td>2020</td>
+                            </tr>                                                
+                            <tr>
+                                <td>MCA LATERAL</td><td>2020</td>
+                            </tr>
+
+                        </tbody>
+                
+                    </table>
+                </div>
+            </div>
+        </div>
+    <script >
+        let btn = document.querySelector("#btn");
+        let sidebar = document.querySelector(".sidebar");
+        let searchBtn = document.querySelector(".bx-search-alt");
+        btn.onclick=function(){
+            sidebar.classList.toggle("active");
+        }
+        searchBtn.onclick=function(){
+            sidebar.classList.toggle("active");
+        }
+    </script>
+    <script>
+        (function () {
+            let year_satart = 2000;
+            let year_end = (new Date).getFullYear()+1; // current year
+            let year_selected = year_end-1;
+        
+            let option = '';
+            option = '<option>Year</option>'; // first option
+        
+            for (let i = year_satart; i <= year_end; i++) {
+                let selected = (i === year_selected ? ' selected' : '');
+                option += '<option value="' + i + '"' + selected + '>' + i + '</option>';
+            }
+        
+            document.getElementById("year").innerHTML = option;
+        })();
+        </script>
+</body>
+</html>

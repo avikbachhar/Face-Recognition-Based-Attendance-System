@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Attendance List</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='topnav.css'>
+    <script src='main.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+
+    
+</head>
+<body onbeforeunload="return myFunction()">        
+    <nav>
+        <div class="header">
+
+        <img class="logo" src="logo3.jpg" alt="logo" height="40px">
+        
+            <ul class="nav_links">
+                <li id="mynavbarlist"><a id="mynavbar"  href="Index2.html">Attendance Page</a></li>
+                <li id="mynavbarlist"><a id="mynavbar" onclick="cameraOff()" href="CheckDetails.html">Details</a></li>
+                <li id="mynavbarlist"><a id="mynavbar" onclick="cameraOff()" href="Admin-home.html">Admin</a></li>
+            </ul>
+        
+        <a class="cta" href="#"><button>Contact</button></a>
+        <a class="cta" href="#"><button onclick="cameraOn()">Camera On</button></a>
+        <a class="cta" href="#"><button  onclick="cameraOff()">Camera Off</button></a>
+
+        </div>
+</nav>
+  <!--    
+<button class="submit" onclick="onClickedEstimatePrice1()" type="button">Estimate Price 1</button>
+<button class="submit" onclick="onClickedEstimatePrice2()" type="button">Estimate Price 2</button>
+<button class="submit" onclick="IterateList()" type="button">Iterate List</button>
+<button class="submit" onclick=" emptyStudentList1()" type="button">EMPTY LIST 1</button>
+<button class="submit" onclick=" emptyStudentList2()" type="button">EMPTY LIST 2</button>
+<button class="submit" onclick=" studentlist()" type="button">Attendance</button>
+<button onclick="startTimer()">Start Timer</button>
+<button onclick="stopTimer()">Stop Timer</button>-->
+    <div class="Items">
+<div class="VideoStream">
+    <!--  <img src="download.jpg" width="50%"/> -->
+    <img id="myImg" src="http://127.0.0.1:5000/video"   onload="loadImage()" onerror="this.onerror=null;imgError(); this.src='compman.gif'"  width="850" height="550"/>
+</div>
+
+    <div class="wrapper">
+        <header> Attendance List</header>
+    <ul class="todoList" id="todoList">
+        <li> Attendance Marked for Student 1</li>
+        <li> Attendance Marked for Student 2</li>
+        <li> Attendance Marked for Student 3</li>
+    </ul>
+    </div>
+</div>
+<script>
+    function myFunction() {
+        cameraOff();
+    }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir='ltr'>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel='stylesheet' type='text/css' media='screen' href='navbardemo-adminhome.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='common-navbar.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js" 
+    integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js" integrity="sha512-+/4Q+xH9jXbMNJzNt2eMrYv/Zs2rzr4Bu2thfvzlshZBvH1g+VGP55W8b6xfku0c0KknE7qlbBPhDPrHFbgK4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/c7dbb8510b.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <i class="fa-solid fa-house-user"></i>
+                <div class="logo_name">Admin Page</div>
+            </div>
+            <i class='bx bx-menu' id='btn'></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <i class='bx bx-search-alt' ></i>
+                <input type="text" placeholder="Search..">
+            <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href='Admin-home.html'><i class="fa-regular fa-user"></i>
+                <span class="links_name">Admin Home</span>
+            </a>
+            <span class="tooltip">Admin Home</span>
+            </li>
+            <li>
+                <a href='Check Attendance.html'><i class="fa-solid fa-calendar-check"></i>
+                <span class="links_name">Check Attendance</span>
+            </a>
+            <span class="tooltip">Check Attendance</span>
+            </li>
+            <li>
+                <a href='Add-Department.html'>
+                    <i class="fa-solid fa-landmark"></i>
+                <span class="links_name">Add Department</span>
+            </a>
+            <span class="tooltip">Add Department</span>
+            </li>
+            <li>
+                <a href='Add New Member.html'>
+                    <i class="fa-solid fa-user-plus"></i>
+                <span class="links_name">Add New Member</span>
+            </a>
+            <span class="tooltip">Add New Member</span>
+            </li>
+ 
+            <li>
+                <a href='CheckDetails.html'>
+                    <i class='bx bx-cog' ></i>
+                <span class="links_name">Check Details</span>
+            </a>
+            <span class="tooltip">Check Details</span>
+            </li>        
+        </ul>
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                    <img src="profile.png" alt="">
+
+                    <div class="name_job">
+                        <div class="name">Avik Bachhar</div>
+                        <div class="job">Developer</div>
+                        </div>
+                    </div>   
+                    <i class='bx bx-log-out' id="log_out" ></i>        
+                </div>
+            </div>
+        </div>
+        <div class="home_content">
+            <div class="text"> Admin Home</div>
+
+                </div> 
+                
+
+
+        </div>
+
+        </div>
+        <div class="counter-up">
+            <div class="content">
+                <div class="box">
+                    <div class="icon"><i class="fas fa-users"></i></div>
+                    <div class="counter">6000</div>
+                    <div class="text">Students</div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="counter">12</div>
+                    <div class="text">Departments</div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fas fa-users"></i></div>
+                    <div class="counter">25</div>
+                    <div class="text">Batches</div>
+                </div>
+
+        
+    <script >
+        let btn = document.querySelector("#btn");
+        let sidebar = document.querySelector(".sidebar");
+        let searchBtn = document.querySelector(".bx-search-alt");
+        btn.onclick=function(){
+            sidebar.classList.toggle("active");
+        }
+        searchBtn.onclick=function(){
+            sidebar.classList.toggle("active");
+        }
+        $('.counter').counterUp({
+    delay: 10,
+    time: 1000
+});
+    </script>
+    
+</body>
+</html>
